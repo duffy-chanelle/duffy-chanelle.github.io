@@ -10859,10 +10859,13 @@ html {
   border-radius: 1rem;
   border-color: #2c3e50;
 }
-.divider-custom .divider-custom-line:first-child {
+.divider-custom .divider-custom-line:only-child {
+  margin: 0;
+}
+.divider-custom .divider-custom-line:first-child:not(:only-child) {
   margin-right: 1rem;
 }
-.divider-custom .divider-custom-line:last-child {
+.divider-custom .divider-custom-line:last-child:not(:only-child) {
   margin-left: 1rem;
 }
 .divider-custom .divider-custom-icon {
@@ -10874,6 +10877,12 @@ html {
 }
 .divider-custom.divider-light .divider-custom-icon {
   color: #fff;
+}
+
+/* Professional blue background for masthead and about section */
+.masthead,
+.bg-professional-blue {
+  background-color: #2c5f8a;
 }
 
 .btn-xl {
