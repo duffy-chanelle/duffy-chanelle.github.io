@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta name="description" content="" />
         <meta name="author" content="" />
-        <title>Chanelle Duffy | Project Three</title>
+        <title>Chanelle Duffy | Machine Learning Control</title>
         <!-- Favicon-->
         <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
         <!-- Font Awesome icons (free version)-->
@@ -37,26 +37,23 @@
         <!-- Page Header / Project Title -->
         <header class="masthead text-white text-center">
             <div class="container d-flex align-items-center flex-column">
-                <h1 class="masthead-heading text-uppercase mb-0">Project Three</h1>
+                <h1 class="masthead-heading text-uppercase mb-0">Machine Learning Control</h1>
                 <div class="divider-custom divider-light">
                     <div class="divider-custom-line"></div>
                 </div>
-                <p class="masthead-subheading font-weight-light mb-0">Project subtitle or tagline goes here</p>
+                <p class="masthead-subheading font-weight-light mb-0">Trimble AgIs Sponsored FYP</p>
             </div>
         </header>
 
-        <!-- Project Image Placeholder -->
+        <!-- Project Image -->
         <section class="page-section" id="project-image">
             <div class="container">
                 <div class="row justify-content-center">
-                    <div class="col-lg-10">
-                        <div class="text-center bg-light border rounded d-flex align-items-center justify-content-center" style="height: 400px;">
-                            <div class="text-secondary">
-                                <i class="fas fa-image fa-4x mb-3 d-block"></i>
-                                <p class="mb-0 fw-bold">Project Image</p>
-                                <small>Replace this block with your image:<br><code>&lt;img class="img-fluid rounded" src="assets/img/project3-main.jpg" alt="Project Three" /&gt;</code></small>
-                            </div>
-                        </div>
+                    <div class="col-lg-10 text-center">
+                        <img class="img-fluid rounded shadow"
+                            src="assets/img/trimble.png"
+                            alt="AgileX Robot used to demonstrate line following capabilities." />
+
                     </div>
                 </div>
             </div>
@@ -71,8 +68,33 @@
                         <div class="divider-custom">
                             <div class="divider-custom-line"></div>
                         </div>
-                        <!-- Replace the paragraph below with your project blurb -->
-                        <p class="lead text-center text-muted fst-italic">Your project description goes here. Explain what the project is, what problem it solves, what you built, and what you learned.</p>
+
+                        <!-- Opening paragraph: hook + role + outcome -->
+                        <p class="lead">
+                            PID control is a concept that's straightforward on paper but notoriously tricky to develop an intuition for. This project set out to make that intuition tangible — a physically constrained quadcopter platform that lets you select different gain combinations and immediately see and measure the effect on system response. I was responsible for [your role here — e.g. the control system implementation and embedded software], working as part of a team to deliver a fully functional demonstrator.
+                        </p>
+
+                        <!-- Technical summary -->
+                        <h5 class="text-uppercase mt-4 mb-3">Hardware</h5>
+                        <ul class="lead">
+                            <li>Modular quadcopter frame restricted to one degree of freedom (vertical motion only), fixed to four guide poles to prevent lateral or rotational movement</li>
+                            <li>Four BLDC motors providing vertical thrust, driven by one ESC per two motors</li>
+                            <li>LIDAR sensor providing altitude feedback to the controller</li>
+                        </ul>
+
+                        <h5 class="text-uppercase mt-4 mb-3">Control System</h5>
+                        <ul class="lead">
+                            <li>PID controller regulating vertical position, rising from a base position to a predefined reference height</li>
+                            <li>User-selectable P, I, and D gain values, allowing multiple combinations to be tested without recompiling</li>
+                            <li>Controller implemented in C++ running on the drone hardware</li>
+                        </ul>
+
+                        <h5 class="text-uppercase mt-4 mb-3">User Interface</h5>
+                        <ul class="lead">
+                            <li>Live graph of drone height against time, bridging the gap between theoretical step response curves and physical behaviour</li>
+                            <li>Automatic calculation of rise time, overshoot, settling time, steady-state value, and max height for each flight</li>
+                            <li>Graphing implemented in Python</li>
+                        </ul>
                     </div>
                 </div>
             </div>
