@@ -3,9 +3,9 @@
     <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-        <meta name="description" content="" />
+        <meta name="description" content="A Trimble-sponsored final-year engineering project covering autonomous steering, Jetson systems integration, CAN communication, GNSS/IMU positioning, Python control software and physical testing." />
         <meta name="author" content="" />
-        <title>Chanelle Duffy | Machine Learning Control</title>
+        <title>Chanelle Duffy | Autonomous Steering Systems Integration</title>
         <!-- Favicon-->
         <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
         <!-- Font Awesome icons (free version)-->
@@ -37,11 +37,12 @@
         <!-- Page Header / Project Title -->
         <header class="masthead text-white text-center">
             <div class="container d-flex align-items-center flex-column">
-                <h1 class="masthead-heading text-uppercase mb-0">Machine Learning Control</h1>
+                <h1 class="masthead-heading text-uppercase mb-0">Autonomous Steering Integration</h1>
                 <div class="divider-custom divider-light">
                     <div class="divider-custom-line"></div>
                 </div>
-                <p class="masthead-subheading font-weight-light mb-0">Trimble AgIs Sponsored FYP</p>
+                <p class="masthead-subheading font-weight-light mb-0">Trimble Agriculture Sponsored Final-Year Project | 2026</p>
+                <p class="mt-3 mb-0">Systems Integration &nbsp;&bull;&nbsp; Positioning &amp; Control &nbsp;&bull;&nbsp; Testing &amp; Validation</p>
             </div>
         </header>
 
@@ -52,7 +53,7 @@
                     <div class="col-lg-10 text-center">
                         <img class="img-fluid rounded shadow"
                             src="assets/img/Agilex.png"
-                            alt="AgileX Hunter SE robotic platform"
+                            alt="AgileX Hunter SE robot used for Trimble autonomous steering controller testing"
                             style="max-height: 60vh; width: auto;" />
                     </div>
                 </div>
@@ -63,106 +64,133 @@
         <section class="page-section bg-light" id="overview">
             <div class="container">
                 <div class="row justify-content-center">
-                    <div class="col-lg-8">
-                        <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Overview</h2>
-                        <div class="divider-custom">
-                            <div class="divider-custom-line"></div>
+                    <div class="col-lg-9">
+                        <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Project Overview</h2>
+                        <div class="divider-custom"><div class="divider-custom-line"></div></div>
+                        <p class="lead">
+                            This five-person final-year project, sponsored by Trimble Agriculture, investigated machine-learning steering control for autonomous agricultural vehicles. The team used an AgileX Hunter SE robot and Trimble NAV960 GNSS/IMU positioning system to develop and physically test steering controllers.
+                        </p>
+                        <p class="lead">
+                            <strong>My contribution was the systems integration and testing infrastructure.</strong> I developed the connection between the team's simulated controllers and the physical vehicle: integrating the onboard hardware, implementing a modular Python control pipeline, and conducting the testing needed to validate the end-to-end system.
+                        </p>
+                        <div class="row g-3 mt-3 text-center">
+                            <div class="col-6 col-lg-3"><div class="bg-white border rounded h-100 p-3"><h3 class="text-secondary mb-1">50 Hz</h3><p class="mb-0 small">Real-time control loop</p></div></div>
+                            <div class="col-6 col-lg-3"><div class="bg-white border rounded h-100 p-3"><h3 class="text-secondary mb-1">2</h3><p class="mb-0 small">Independent CAN interfaces</p></div></div>
+                            <div class="col-6 col-lg-3"><div class="bg-white border rounded h-100 p-3"><h3 class="text-secondary mb-1">46</h3><p class="mb-0 small">Controller input features</p></div></div>
+                            <div class="col-6 col-lg-3"><div class="bg-white border rounded h-100 p-3"><h3 class="text-secondary mb-1">40+</h3><p class="mb-0 small">Physical runs used to assess localisation</p></div></div>
                         </div>
-                        <p class="lead">
-                            This project investigates the application of machine learning to vehicle steering control for autonomous agricultural guidance. Using the AgileX Hunter SE robotic platform integrated with Trimble's NAV-960 positioning system, the aim is to develop and evaluate a learning-based steering controller capable of robust path following under varying terrain and operating conditions.
-                        </p>
-                        <p class="lead">
-                            Traditional control approaches in this domain rely on fixed models and high-precision sensing, but struggle to account for nonlinear vehicle dynamics caused by changing loads, terrain variability, and environmental conditions. The outcomes of this work contribute to ongoing research into next-generation autonomous guidance systems for agricultural machinery, with potential applications in precision farming to improve navigation accuracy, reduce soil disturbance, and increase operational efficiency.
-                        </p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Role & Responsibilities -->
+        <!-- Role and responsibilities -->
         <section class="page-section" id="role">
             <div class="container">
                 <div class="row justify-content-center">
-                    <div class="col-lg-8">
-                        <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Role &amp; Responsibilities</h2>
-                        <div class="divider-custom">
-                            <div class="divider-custom-line"></div>
-                        </div>
+                    <div class="col-lg-9">
+                        <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">My Role &amp; Responsibilities</h2>
+                        <div class="divider-custom"><div class="divider-custom-line"></div></div>
                         <p class="lead">
-                            This project is conducted in a team of five — three electrical engineering students and two mechatronics — with each member assigned a primary and secondary role to balance workload across the year. The five primary roles are simulation and plant modelling, controller design and development, machine learning development, systems integration, and testing and validation.
+                            I was responsible for systems integration, with additional responsibility for physical testing and validation. Other team members developed the PID and machine-learning controllers; I focused on making them deployable and testable on the actual robot.
                         </p>
-                        <p class="lead">My primary role is systems integration, with a secondary focus on simulation and modelling. My technical responsibilities include:</p>
                         <ul class="lead">
-                            <li>Setting up the machine learning training and testing pipeline</li>
-                            <li>Reading IMU and GNSS data from the NAV-960 module via CAN communication on a host computer</li>
-                            <li>Sending and receiving control and telemetry data between the Hunter SE platform and onboard systems via CAN communication</li>
-                            <li>Integrating the NVIDIA Jetson Xavier NX into the control pipeline as the onboard computing platform</li>
-                            <li>Supporting the integration of simulation and physical testing environments</li>
-                            <li>Validating simulation dynamics against the physical behaviour of the robotic platform</li>
-                            <li>Assisting with controller deployment and real-time system testing</li>
+                            <li>Integrated the NAV960 GNSS/IMU, NVIDIA Jetson computer and AgileX Hunter SE into a complete hardware and software system.</li>
+                            <li>Configured Linux and CAN communication, including separate 250 kbit/s NAV960 and 500 kbit/s robot interfaces.</li>
+                            <li>Implemented Python modules for sensor acquisition, coordinate transformation, input formatting, controller execution and robot commands.</li>
+                            <li>Built simulated-sensor and open-loop testing tools to validate software and compare physical behaviour with simulation.</li>
+                            <li>Conducted outdoor controller tests, developed structured data logging and investigated integration issues.</li>
+                            <li>Supported the simulation-to-machine-learning workflow with automatic CSV dataset generation.</li>
                         </ul>
+                        <p class="mb-0"><strong>Technologies:</strong> Python, Linux, NVIDIA Jetson Xavier NX / Orin Nano, CAN &amp; SocketCAN, GNSS/IMU, ONNX Runtime, Git, CSV/JSON logging, robotics simulation.</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Project Stages -->
+        <!-- Technical implementation -->
         <section class="page-section bg-light" id="stages">
             <div class="container">
                 <div class="row justify-content-center">
-                    <div class="col-lg-8">
-                        <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Project Stages</h2>
-                        <div class="divider-custom">
-                            <div class="divider-custom-line"></div>
-                        </div>
-                        <p class="lead text-muted fst-italic">The project is currently at Stage 3 of the development plan.</p>
+                    <div class="col-lg-9">
+                        <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">System Design &amp; Implementation</h2>
+                        <div class="divider-custom"><div class="divider-custom-line"></div></div>
 
-                        <h5 class="text-uppercase mt-4 mb-3">Stage 1 — Simulation Model Development</h5>
-                        <p class="lead">Development of a Gazebo-based simulation of the AgileX Hunter SE platform to replicate vehicle dynamics and enable rapid testing of control strategies.</p>
+                        <h5 class="text-uppercase mt-4 mb-3">Hardware Integration &amp; CAN Communication</h5>
+                        <p class="lead">
+                            I integrated the NAV960 positioning module, Jetson onboard computer and Hunter SE vehicle, including regulated power distribution and separate CAN buses. The NAV960 communicates through the Jetson's native CAN controller and an external transceiver at 250 kbit/s; the Hunter SE uses a USB-CAN adapter at 500 kbit/s.
+                        </p>
+                        <p class="lead">
+                            Initial development used a loaned Jetson Xavier NX before moving to a Trimble-owned Orin Nano. The migration required troubleshooting a missing <code>gs_usb</code> kernel driver to restore USB-CAN support. I also implemented consistent CAN interface mapping and startup configuration for headless field operation over SSH.
+                        </p>
 
-                        <h5 class="text-uppercase mt-4 mb-3">Stage 2 — Baseline Controller &amp; Data Generation</h5>
-                        <p class="lead">Implementation of a baseline closed-loop controller in simulation for path following, used to generate state-action datasets for machine learning training.</p>
+                        <h5 class="text-uppercase mt-4 mb-3">Modular Python Control Pipeline</h5>
+                        <p class="lead">
+                            I developed a modular pipeline that acquires NAV960 measurements, converts the reported position and heading into a local coordinate frame, assembles the controller inputs, and sends steering and velocity commands to the Hunter SE. Sensor acquisition and robot communication run independently of the main 50 Hz control loop, reducing the risk of communication delays interrupting control.
+                        </p>
+                        <p class="lead">
+                            The input builder produces the 46-element feature vector used by the machine-learning models, including reference-path coordinates, velocity, yaw rate and cross-track error. The waypoint-selection and cross-track-error algorithms were developed by a teammate; I integrated them into the physical pipeline and implemented the required frame transformations and controller interface.
+                        </p>
 
-                        <h5 class="text-uppercase mt-4 mb-3">Stage 3 — Imitation Learning Controller Development</h5>
-                        <p class="lead">Training of a behavioural cloning model to replicate baseline controller performance using inputs such as cross-track error, heading error, and look-ahead point data. Additional state variables and control history are progressively incorporated to improve performance.</p>
-
-                        <h5 class="text-uppercase mt-4 mb-3">Stage 4 — Reinforcement Learning Optimisation</h5>
-                        <p class="lead">Application of reinforcement learning techniques to refine the controller using reward functions that prioritise path accuracy, smooth steering, and stability, while penalising oscillatory behaviour.</p>
-
-                        <h5 class="text-uppercase mt-4 mb-3">Stage 5 — Disturbance Testing &amp; Validation</h5>
-                        <p class="lead">Evaluation of controller robustness under disturbance conditions including uneven terrain and slopes. Performance is assessed using path-tracking accuracy, trajectory deviation, and control smoothness, with error distributions analysed using CDF metrics (p68 and p95).</p>
+                        <h5 class="text-uppercase mt-4 mb-3">Interchangeable Controllers &amp; Robot API</h5>
+                        <p class="lead">
+                            The software supports the team's baseline PID controller, neural network controllers loaded through ONNX Runtime, and an open-loop mode for validation. Controller type, model selection, reference path, commanded velocity and logging options are configurable without changing the main pipeline. The Hunter SE API handles CAN control-mode selection, steering/velocity commands, command refresh and vehicle feedback.
+                        </p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Progress to Date -->
+        <!-- Testing -->
         <section class="page-section" id="progress">
             <div class="container">
                 <div class="row justify-content-center">
-                    <div class="col-lg-8">
-                        <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Progress to Date</h2>
-                        <div class="divider-custom">
-                            <div class="divider-custom-line"></div>
-                        </div>
-
-                        <h5 class="text-uppercase mt-4 mb-3">Simulation-to-ML Training Pipeline</h5>
-                        <p class="lead">Developed a data pipeline linking simulation outputs to the machine learning training workflow. This included implementing structured logging of state and control variables to CSV format, enabling automated dataset generation from simulation runs and integration into Python-based imitation learning training scripts. A workflow was also defined for exporting trained model parameters back into the simulation environment for iterative testing.</p>
-
-                        <h5 class="text-uppercase mt-4 mb-3">Simulation Validation &amp; Steering Model Calibration</h5>
-                        <p class="lead">Assisted in validating the simulation model against the physical AgileX Hunter SE platform. This involved comparing simulated steering response with real-world vehicle behaviour and using experimental measurements to refine model parameters.</p>
-
-                        <h5 class="text-uppercase mt-4 mb-3">Onboard Compute &amp; Communication Integration</h5>
-                        <p class="lead">Configured the Jetson Xavier NX development platform as the onboard computing environment, including OS setup, dependency configuration, and communication interface setup.</p>
-
-                        <h5 class="text-uppercase mt-4 mb-3">Robot Communication &amp; CAN Data Pipeline</h5>
-                        <p class="lead">Implemented and tested CAN-based communication between the Hunter SE platform and onboard systems, including decoding and monitoring of real-time telemetry (steering angle, velocity, battery status, system state) at 500 kbaud. Ensured reliable data capture for both debugging and dataset generation.</p>
-
-                        <h5 class="text-uppercase mt-4 mb-3">GNSS/IMU Data Acquisition — NAV-960 Integration</h5>
-                        <p class="lead">Assisted in establishing a data pipeline for GNSS and IMU outputs from the Trimble NAV-960 system. Due to interface limitations, a temporary Arduino-based CAN-to-serial bridge was used to forward processed sensor data to the Jetson, enabling real-time monitoring and logging for system integration and validation.</p>
-
+                    <div class="col-lg-9">
+                        <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Testing &amp; Validation</h2>
+                        <div class="divider-custom"><div class="divider-custom-line"></div></div>
                         <p class="lead">
-                            The project is ongoing, with current work focused on implementing closed-loop control to complete the end-to-end system pipeline and enable validation of integrated sensing, communication, and control on the physical Hunter SE platform, alongside continued development of structured GNSS/IMU data handling for ML training support.
+                            I tested the system incrementally, from individual hardware connections and software modules through to complete outdoor vehicle runs. This made it easier to isolate failures before introducing more components into the control loop.
+                        </p>
+
+                        <h5 class="text-uppercase mt-4 mb-3">Hardware &amp; Interface Checks</h5>
+                        <p class="lead">
+                            Verified regulated supply voltages, checked CAN transceiver connections, inspected incoming frames with <code>candump</code>, and performed controlled motion tests to confirm that commands and telemetry passed correctly between the Jetson and robot.
+                        </p>
+
+                        <h5 class="text-uppercase mt-4 mb-3">Software Simulation &amp; Repeatable Test Inputs</h5>
+                        <p class="lead">
+                            I built a NAV960 simulator using a bicycle kinematic model so the downstream software could be tested without the physical sensor. It supported configurable starting position, heading and measurement noise. For simulation-to-hardware comparison, I implemented open-loop step, sine and chirp steering inputs, with chirp tests used extensively to evaluate steering response across frequencies.
+                        </p>
+
+                        <h5 class="text-uppercase mt-4 mb-3">Automated Logging &amp; Troubleshooting</h5>
+                        <p class="lead">
+                            Each test run could automatically produce timestamped CSV files covering raw NAV960 measurements, the 46-element controller input, steering output and cross-track error, alongside a JSON file recording the test configuration. A separate validation log captured actual robot steering and velocity for comparison with simulation. These logs helped identify inconsistent GNSS starting poses and a mismatch between controller output units and steering-command units.
+                        </p>
+
+                        <h5 class="text-uppercase mt-4 mb-3">Outdoor End-to-End Testing</h5>
+                        <p class="lead">
+                            I helped deploy and test both PID and reinforcement-learning controllers on the physical Hunter SE. The local coordinate transformation was evaluated over at least 40 physical runs beginning from different positions, with test logs used to compare vehicle trajectories against reference paths and investigate tracking deviations.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Outcomes -->
+        <section class="page-section bg-light" id="outcomes">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-9">
+                        <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Outcomes &amp; Lessons</h2>
+                        <div class="divider-custom"><div class="divider-custom-line"></div></div>
+                        <p class="lead">
+                            <strong>The end-to-end integration was successful:</strong> live positioning data reached the Jetson, the control pipeline generated steering commands, and both PID and reinforcement-learning controllers were executed on the physical vehicle. On the tested reference path, both controllers followed the overall trajectory, although tracking around turns remained imperfect.
+                        </p>
+                        <p class="lead">
+                            Testing also revealed areas requiring further investigation. The initial localisation procedure could be sensitive to unreliable NAV960 measurements during startup, and the 5 m lookahead used in feature selection was a possible contributor to tracking deviations on tighter curves. These were identified as limitations rather than proven causes of all observed error.
+                        </p>
+                        <p class="lead mb-0">
+                            The project gave me hands-on experience with hardware/software integration, real-time sensing and control, repeatable test procedures, data-driven fault investigation and adapting a system when field conditions or hardware dependencies did not behave as expected. The final software architecture was designed to let Trimble test additional controllers without rebuilding the surrounding system.
                         </p>
                     </div>
                 </div>
